@@ -54,11 +54,7 @@ public class OrderPage extends JFrame {
 	private PayFrame payFrame;
 	private OrderStore store;
 	private Menu menu1;
-
-	/**
-	 * Create the frame.
-	 * @param store2 
-	 */
+	
 	public OrderPage(Menu menu1, OrderStore store2) {
 		this.menu1 = menu1;
 		setTitle("點餐頁面");
@@ -108,7 +104,7 @@ public class OrderPage extends JFrame {
 		JPanel orderPanel = new JPanel();
 		orderPanel.setBackground(Color.WHITE);
 		orderAndTablePanel.add(orderPanel, BorderLayout.WEST);
-		orderPanel.setLayout(new GridLayout(0, 2, 0, 0));
+		orderPanel.setLayout(new GridLayout(0, 2));
 		orderPanel.setPreferredSize(new Dimension(300,100));
 		
 		JLabel selectItemLabel = new JLabel("請選擇餐點");
@@ -126,8 +122,8 @@ public class OrderPage extends JFrame {
 		orderPanel.add(quantityLabel);
 
 		orderPanel.add(quantity);
-		orderPanel.add(add);
 		orderPanel.add(delete);
+		orderPanel.add(add);
 		
 		JPanel listPanel = new JPanel();
 		listPanel.setBackground(Color.WHITE);
